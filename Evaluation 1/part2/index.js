@@ -48,7 +48,7 @@ app.put("/product/:id",(req,res) => {
 })
 
 
-const PORT = 8080
+const PORT = 7000
 app.listen(PORT, (req, res) => [
     console.log(`Listening on port ${PORT}`)
 
