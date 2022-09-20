@@ -16,3 +16,34 @@ if(value === "delete"){
     
     console.log("Delete this file", content);
     }
+
+    if(value === 'write'){
+        let content = fs.writeFile(fileName, "Hello world is written",(err)=>{
+            if(err) throw err;
+            console.log("File written");
+        })
+     
+    }
+
+    if(value === 'append'){
+        let content = fs.appendFileSync(fileName,'data appended')
+        console.log("Data appended")
+    }
+
+    if(value === "create"){
+        fs.writeFile("newFile.txt", "hello this is new file",(err)=>{
+            if(err) throw err;
+
+            console.log("New file added");
+        })
+    }
+
+    if(value === "rename"){
+        fs.rename("newFile.txt", "renamedFile.txt",(err)=>{
+            
+            if(err) throw err;
+
+            console.log("file renamed");
+
+        })
+    }
